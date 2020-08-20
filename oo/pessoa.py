@@ -1,5 +1,5 @@
 class Pessoa:
-    def __init__(self, nome=None, idade=36, *filhos):
+    def __init__(self, nome=None, idade=30, *filhos):
         self.idade = idade
         self.nome = nome
         self.filhos = list(filhos)
