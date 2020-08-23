@@ -18,9 +18,16 @@ class Pessoa:
         return f'{cls} - olhos {cls.olhos}'
 
 
+class Homem(Pessoa):
+    def cumprimentar(self):
+        return f'{super().cumprimentar()} Show!'
+
+
+
 if __name__ == '__main__':
-    doug = Pessoa('Doug', 37, 'Flor', 'Maju')
+    doug = Homem('Doug', 37, 'Flor', 'Maju')
     braaw = Pessoa('Nilton', 70, doug)
     for filho in braaw.filhos:
         print(filho.nome)
         print(Pessoa.nome_e_atributos_de_classe())
+    print(braaw.cumprimentar())
